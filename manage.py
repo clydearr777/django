@@ -2,9 +2,12 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+# from http.server import BaseHTTPRequestHandler, HTTPServer
+# from urllib.parse import urlparse, parse_qs
 
 hostName = "localhost"
 serverPort = 8080
+
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
@@ -19,5 +22,15 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
-    main()
+# class MyServer:
+#     pass
+#
+#
+# if __name__ == "__main__":
+#
+#     webServer = HTTPServer((hostName, serverPort), MyServer)
+#     print("Server started http://%s:%s" % (hostName, serverPort))
+#     try:
+#         webServer.serve_forever()
+#     except KeyboardInterrupt:
+#         pass
